@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Photo Library app - React</title>
+    <style>
+      body {
+        background-color: #aaa;
+        font: 16px tahoma;
+      }
+      img {
+        border-radius: 50px;
+        height: 480px;
+        width: 720px;
+      }
+      thead {
+        font: italic bold 24px;
+      }
+      .list-table {
+        float: left;
+        padding: 20px 70px 20px 20px;
+        font: italic 16px tahoma;
+      }
+      .photo {
+        padding: 20px 50px 20px 20px;
+        font: 16px;
+      }
+    </style>
+  </head>
+  <body>
+    <script src="lib/babel-core/browser.js"></script>
+    <script src="lib/react/react.js"></script>
+    <script src="lib/react/react-dom.js"></script>
+
+    <script src="data/PhotoData.js"></script>
+
+    <script type="text/babel" src="components/Photo.js"></script>
+    <script type="text/babel" src="components/ListRow.js"></script>
+    <script type="text/babel" src="components/List.js"></script>
+    <script type="text/babel" src="components/Navs.js"></script>
+    <script type="text/babel" src="components/Apps.js"></script>
+    <div id="app"></div>
+  </body>
+</html>
+
