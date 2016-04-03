@@ -1,7 +1,8 @@
 var List = ({list, handleTitleClick}) => {
-  var listEntries = list.map((photo) =>
+  var listEntries = list.map((photo, key) =>
     <ListRow
       photo={photo}
+      key={key}
       handleTitleClick={handleTitleClick}
     />
   );
@@ -10,7 +11,7 @@ var List = ({list, handleTitleClick}) => {
     <div className="list-table">
       <table>
         <thead>
-          <p><u>Image Library</u></p>
+          Image Library
         </thead>
         <tbody>
           {listEntries}

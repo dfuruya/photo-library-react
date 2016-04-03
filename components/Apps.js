@@ -8,10 +8,17 @@ class App extends React.Component {
     }
   }
 
-  handleTitleClick(photo) {
+  handleTitle(photo) {
     this.setState({
       currentPhoto: photo
     });
+  }
+
+  handleRating(event) {
+    this.setState({
+      rating: event.target.value
+    });
+    this.state.currentPhoto.rating = event.target.value;
   }
 
   render() {
@@ -20,11 +27,15 @@ class App extends React.Component {
         <Nav />
         <List 
           list={this.state.photos} 
-          handleTitleClick={this.handleTitleClick.bind(this)}
+          handleTitleClick={this.handleTitle.bind(this)}
         />
         <Photo 
           photo={this.state.currentPhoto} 
         />
+        <Rating 
+          handleRatingClick={this.handleRating.bind(this)}
+        />
+          
       </div>
     );
   }

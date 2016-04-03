@@ -3,7 +3,7 @@ var ListRow = ({photo, handleTitleClick}) => (
     className="list-row"
     onClick={() => handleTitleClick(photo)}
   >
-    <a>{photo.title}</a>
+    {photo.title}
   </div>
 );
 
