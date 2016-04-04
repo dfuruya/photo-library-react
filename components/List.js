@@ -1,5 +1,5 @@
 var List = ({list, handleTitleClick}) => {
-  var listEntries = list.map((photo, key) =>
+  var listEntries = list.map((photo, key) => 
     <ListRow
       photo={photo}
       key={key}

@@ -21,10 +21,21 @@ class App extends React.Component {
     this.state.currentPhoto.rating = event.target.value;
   }
 
+  handleSubmit(image) {
+    this.setState({
+      title: image.title,
+      url: image.url 
+    });
+    this.state.photos.push(image);
+  }
+
   render() {
     return (
       <div>
-        <Nav />
+        <Nav 
+          list={this.state.photos}
+          handleSubmitClick={this.handleSubmit.bind(this)}
+        />
         <List 
           list={this.state.photos} 
           handleTitleClick={this.handleTitle.bind(this)}
